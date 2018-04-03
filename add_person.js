@@ -20,5 +20,5 @@ const dob = [process.argv[4]];
 knex('famous_people')
     .insert({ first_name: firstName, last_name: lastName, birthdate: dob })
     .then(function() {
-        process.exit();
+        knex.destroy();
     })
