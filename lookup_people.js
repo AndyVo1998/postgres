@@ -20,7 +20,7 @@ client.connect((err) => {
     }
     let count = 1;
     console.log("Searching ... ")
-    console.log("Found " + result.rows.length + " person(s) " + "by the name '" + process.argv[2] + "':")
+    console.log("Found " + result.rows.length + " person(s) by the name '" + process.argv[2] + "':")
     result.rows.forEach(function(e) {
       let birthday = e.birthdate.toISOString().slice(0,10)
       console.log("-" + count + ": " + e.first_name + " " + e.last_name + ", born " + "'" + birthday + "'");
